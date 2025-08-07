@@ -57,12 +57,13 @@ public class Megalith {
     private String imageUrl4;
     private String imageUrl5;
 
-    @Column(nullable = false)
-    private String userId;
+    @ManyToOne
+    @JoinColumn(name = "id", nullable = false)
+    private User user;
 
     @Column(nullable = false)
     private LocalDate date;
 
-    @OneToMany(mappedBy = "megalith", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "megalith", cascade = CascadeType.ALL, orphanRemoval = false)
     private List<Post> posts;
 }

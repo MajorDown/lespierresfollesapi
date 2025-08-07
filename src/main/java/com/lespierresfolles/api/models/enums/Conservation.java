@@ -1,8 +1,10 @@
 package com.lespierresfolles.api.models.enums;
 
 public enum Conservation {
-    BON_ETAT,
-    ETAT_MOYEN,
-    MAUVAIS_ETAT,
-    DETRUIT
+    bon_état,
+    état_moyen,
+    mauvais_état,
+    détruit
 }
+
+
